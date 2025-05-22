@@ -5,6 +5,7 @@
 body{
     background-color: rgba(253, 246, 239, 1);
     font-family: 'Poppins', sans-serif;
+    font-size: 24px;
 }
 
 * {
@@ -133,101 +134,115 @@ nav img:hover {
 }
 
 .content-container{
-    margin: 10px;
-    padding: 5%;
-    height: 180vh;
-    width: 100vw;
-    margin-top: 10vh;  
-    font-size: 2.4vh;
-
+    height: 88svh;
+    margin-top: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
 
-.lc-history{
+.content-desc{
+    width: 40%;
+    margin: 3%;
+    margin-left:6.5%;
+    margin-right: 0;
+}
+.location-desc{
+    flex-grow: 1;
     display: flex;
-    width: 100%;
+}
+.subhead{
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    font-style: normal;
+    letter-spacing: 7%;
     height: 45%;
 }
-.lc-pictures{
-    display: block;
-    width: 47%;
-    height: 100%;
-    margin-left: 2%; 
+
+#top-note{
+    font-size: 4vh;
+}
+#upper-h1-left{
+    color: rgba(78, 38, 26, 1);
+    font-size:9.6vh ;
+}
+#upper-h1-right{
+    color: rgba(222, 108, 56, 1);
+    font-size:9.6vh ;
+}
+#lower-h1{
+    color: black;
+    font-size:12vh ;
+    line-height: 50%;
 }
 
-.lc-pictures img{
-    width: 85%;
-    align-self: center;
-}
-.lc-history-desc{
-    display: block;
-    height: 90%;
-    width: 50%;
-    align-self:center ;
-    padding: 2%;
-   
-}
-.subhead {
-  font-family: "Jaro", sans-serif;
-  font-size:10vh;
-  font-optical-sizing: auto;
-  font-weight: 10;
-  font-style: normal;
-  letter-spacing: 10%;
-  display: flex;
-}
-
-.labbaik {
-  color: #4e261a; /* dark brown */
-  margin-right: 4%
-}
-
-.chicken {
-  color: #e87741; /* orange */
-  margin-left: 10px; /* space between words */
-}
-
-#history{
-    margin-right: 15%;
-    
-}
-
-
-.lc-visi-misi{
-    background-color:rgba(222, 108, 56, 0.28);
-    width: 100%;
-    height: 35%;
-    display: flex;
-    padding: 10px;
-    border-radius: 35px;
-    margin-top: 100px;
-    align-items: center;
-
-}
-
-.visi-misi-desc{
-    width: 55%;
-    height: 100%;
-    padding:3%;
-    padding-right: 10%;
-    align-content: center;
-    padding-left: 7%;
-}
-
-.visi-misi-desc h2{
-    font-size: 5.6vh;
-}
-
-.visi-misi-pic{
-    width: 40%;
+.map-section{
+    background-color: rgb(156, 188, 188);
+    width: 60%;
+    margin-right:6.5%;
+    margin-left: 0;
+    margin-top: 6%;
     height: 80%;
-    margin-left: auto;
-    margin-right: 10%;
-    border-radius: 40px 0px 0px 40px;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.fasilitas-container{
+    height: 60svh;
+    width: 87%;
+    margin-top: 12vh;
+    margin-left: 6.5%;
+    display: block;
+    margin-bottom: 10%;
+
+}
+.fasilitas-container h1{
+    display: flex;
+}
+.slider-container{
+    display: flex;
+    height: 100%;
+    width: 100%;  
+    
+
+}
+.pic-container > div{
+    background-color: #645d5d;
+  margin-right: 5%;
+  padding: 15%;
+  font-size: 30px;
+  width: 100%;
+  border-radius: 8%;
+
+}
+
+.pic-container{
+    flex-grow: 10;
+    display: flex;
+}
+.slide-button{
+    flex-grow: 1;
+    display: flex;
     align-content: center;
+    justify-content: center;
+    margin-left: 5%;
 }
-.visi-misi-pic img{
-   width: 100%;
-   height: 99%;
-   object-fit: cover;
-   border-radius: 40px 0px 0px 40px;
+.circle-button{
+    align-self: center;
+     text-decoration: none;
+     background-color: rgba(78, 38, 26, 1);
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 52px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 45%;
+    border-radius: 500px;
 }
+
