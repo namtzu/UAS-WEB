@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+
+:root {}
+
+body{
+    background-color: rgba(253, 246, 239, 1);
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    z-index: 2;
+}
+
+.header nav a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.header.scrolled nav a {
+    color: rgba(253, 246, 239, 1);
+}
+
+.header.scrolled {
+    background-color: rgba(222, 108, 56, 1);
+}
+
+.bg {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(253, 246, 239, 1);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+    transition: 0.5s ease;
+    left: 12%;
+}
+
+nav img:hover {
+    transform: scale(1.2);
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li.active::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #f1592a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li a {
+    color: rgba(78, 38, 26, 1);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li a:hover {
+    color: #f1592a;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f1592a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.content-container{
+    margin: 10px;
+    padding: 5%;
+    height: 180vh;
+    margin-top: 10vh;  
+    font-size: 24px;
+}
+
+.lc-history{
+    display: flex;
+    width: 100%;
+    height: 45%;
+}
+.lc-pictures{
+    display: block;
+    background-color: #b98d8d;
+    width: 47%;
+    height: 100%;
+    margin-left: 2%;
+    
+}
+.lc-history-desc{
+    display: block;
+    height: 90%;
+    width: 50%;
+    align-self:center ;
+    padding: 2%;
+   
+}
+.subhead {
+  font-family: "Jaro", sans-serif;
+  font-size:96px;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  font-style: normal;
+  letter-spacing: 10%;
+  display: flex;
+}
+
+.labbaik {
+  color: #4e261a; /* dark brown */
+  margin-right: 4%
+}
+
+.chicken {
+  color: #e87741; /* orange */
+  margin-left: 10px; /* space between words */
+}
+
+#history{
+    margin-right: 15%;
+}
+
+
+.lc-visi-misi{
+    background-color:rgba(222, 108, 56, 0.28);
+    width: 100%;
+    height: 35%;
+    display: flex;
+    padding: 10px;
+    border-radius: 35px;
+    margin-top: 100px;
+    align-items: center;
+
+}
+
+.visi-misi-desc{
+    width: 55%;
+    height: 100%;
+    padding:3%;
+    padding-right: 10%;
+    align-content: center;
+    padding-left: 7%;
+}
+
+.visi-misi-desc h2{
+    font-size: 56px;
+}
+
+.visi-misi-pic{
+    width: 40%;
+    height: 80%;
+    background-color: rgb(59, 99, 99);
+    margin-left: auto;
+    margin-right: 10%;
+    border-radius: 40px 0px 0px 40px;
+    align-content: center;
+}
