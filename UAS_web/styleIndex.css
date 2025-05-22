@@ -20,7 +20,7 @@
 }
 
 .header.scrolled {
-    background-color: rgb(0, 15, 4);
+    background-color: rgba(222, 108, 56, 1);
 }
 
 .bg {
@@ -82,7 +82,7 @@ nav img:hover {
     content: '';
     width: 0;
     height: 2px;
-    background: #f1592a;
+    background: white;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -120,7 +120,6 @@ nav img:hover {
 }
 
 .text-box p{
-    margin: 10px 0 40px;
     font-size: 20px;
     color: black;
 }
@@ -170,6 +169,10 @@ h1 {
     transition: all 0.5s ease;
 }
 
+.card:hover{
+    transform: scale(1.05) translateY(-10px);
+}
+
 .card-chicken {
     background-image: url(images/chicken.png);
 }
@@ -194,5 +197,36 @@ h1 {
     position: relative;
     padding: 20px;
     cursor: pointer;
+}
+
+.penawaran {
+    color: rgba(253, 246, 239, 1);
+    position: absolute;
+    left: 7%;
+}
+
+.deals {
+    background-color: rgba(222, 108, 56, 1);
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.cardDeals {
+    width: 500px;
+    height: 300px;
+    background-color: blanchedalmond;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    text-align: left;
+    align-items: flex-end;
+    transition: all 0.5s ease;
 }
 
