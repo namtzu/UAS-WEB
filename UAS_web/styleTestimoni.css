@@ -161,71 +161,103 @@ nav img:hover {
     color: rgba(222, 108, 56, 1);
 }
 
-.daftarMenu {
-    background-color: rgba(253, 246, 239, 1);
-    width: 100%;
-    margin: auto;
+main {
+    padding: 2rem;
+}
+
+main h2{
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    margin-bottom: 25px;
 }
 
-.judulMenu {
-    color: rgba(222, 108, 56, 1);
-    margin-top: 10%;
+.form-section {
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.cardMenu {
-    width: 260px;
-    height: 145px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-    cursor: pointer;
-    overflow: hidden;
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#testimoni-form label {
+    text-align: center;
+}
+
+form {
     display: flex;
-    text-align: center;
-    align-items: flex-end;
-    box-sizing: border-box;
-    padding: 20px;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.card-content {
-    position: relative;
-    padding: 20px;
+input[type="text"],
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 0.7rem;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-.card-chickenTitle {
-    color: rgba(78, 38, 26, 1);
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
 }
 
-.card-chickenPrice {
-    color: rgba(222, 108, 56, 1);
-    text-align: left;
-    margin-left: 8%;
+.rating input {
+    display: none;
 }
 
-.card-chicken1 {
-    background-image: url(images/imgChicken.png);
-    width: 260px;
-    height: 180px;
-}
-
-.card-contentChicken {
-    position: relative;
-    padding: 20px;
+.rating label {
+    font-size: 2rem;
+    color: #ccc;
     cursor: pointer;
-    width: 230px;
-    height: 155px;
+    transition: color 0.3s;
 }
 
-.rowMenu {
-    color: black;
-    margin: 5%;
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00;
+}
+
+.testimoni-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: center;
-    gap: 120px;
+    margin-bottom: 25px;
+}
+
+.testimoni {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+
+.testimoni p {
+    font-style: italic;
+}
+
+.testimoni h3 {
+    text-align: right;
+    color: #e63946;
 }
