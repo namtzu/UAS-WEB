@@ -47,13 +47,13 @@
         <h2>Berikan Tanggapanmu!</h2>
         <section class="form-section">
             <form id="testimoni-form">
-                <label for="nama">Nama kamu</label>
+                <label class="judulTestimoni" for="nama">Nama kamu</label>
                 <input type="text" id="nama" name="nama" required>
 
-                <label for="pesan">Tanggapan kamu</label>
+                <label class="judulTestimoni" for="pesan">Tanggapan kamu</label>
                 <textarea id="pesan" name="pesan" rows="4" required></textarea>
 
-                <label>Rating:</label>
+                <label class="judulTestimoni">Rating:</label>
                 <div class="rating">
                     <input type="radio" name="bintang" id="bintang5" value="5">
                     <label for="bintang5">&#9733;</label>
@@ -66,8 +66,9 @@
                     <input type="radio" name="bintang" id="bintang1" value="1">
                     <label for="bintang1">&#9733;</label>
                 </div>
-
-                <button type="submit">Submit</button>
+                <div class="submitButton">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </section>
     </main>

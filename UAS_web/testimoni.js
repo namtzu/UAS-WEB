@@ -19,8 +19,9 @@ document.getElementById('testimoni-form').addEventListener('submit', function(e)
     const stars = '★'.repeat(bintang);
 
     newTestimoni.innerHTML = `
+        <h4>${nama}</h4>
+        <h3>${stars}</h3>
         <p>"${pesan}"</p>
-        <h3>${stars} - ${nama}</h3>
     `;
 
     container.prepend(newTestimoni); 
