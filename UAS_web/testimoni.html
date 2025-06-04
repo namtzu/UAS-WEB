@@ -38,38 +38,42 @@
 
     <section class="daftarMenu">
 
-    <div class="rowMenu">
+      <main>
 
-            <div>
-                <div class="cardMenu card-chicken1"></div>
-                <div class="card-contentChicken">
-                        <h2 class="card-chickenTitle">Lorem Ipsum</h2>
-                        <h3 class="card-chickenPrice">Rp17.000</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>     
+        <section class="testimoni-container" id="testimoni-container">
 
-            <div>
-                <div class="cardMenu card-chicken1"></div>
-                <div class="card-contentChicken">
-                        <h2 class="card-chickenTitle">Lorem Ipsum</h2>
-                        <h3 class="card-chickenPrice">Rp17.000</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </div>     
+        </section>
 
-            <div>
-                <div class="cardMenu card-chicken1"></div>
-                <div class="card-contentChicken">
-                        <h2 class="card-chickenTitle">Lorem Ipsum</h2>
-                        <h3 class="card-chickenPrice">Rp17.000</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2>Berikan Tanggapanmu!</h2>
+        <section class="form-section">
+            <form id="testimoni-form">
+                <label class="judulTestimoni" for="nama">Nama kamu</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label class="judulTestimoni" for="pesan">Tanggapan kamu</label>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea>
+
+                <label class="judulTestimoni">Rating:</label>
+                <div class="rating">
+                    <input type="radio" name="bintang" id="bintang5" value="5">
+                    <label for="bintang5">&#9733;</label>
+                    <input type="radio" name="bintang" id="bintang4" value="4">
+                    <label for="bintang4">&#9733;</label>
+                    <input type="radio" name="bintang" id="bintang3" value="3">
+                    <label for="bintang3">&#9733;</label>
+                    <input type="radio" name="bintang" id="bintang2" value="2">
+                    <label for="bintang2">&#9733;</label>
+                    <input type="radio" name="bintang" id="bintang1" value="1">
+                    <label for="bintang1">&#9733;</label>
                 </div>
-            </div>       
-    </div>
+                <div class="submitButton">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="testimoni.js"></script>
 
     <script src="app.js"></script>
 </body>
