@@ -275,3 +275,65 @@ button {
     text-align: center;
     color: rgba(255, 206, 8, 1);
 }
+
+footer.footer-main {
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  background-color: #f97316; 
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-contact,
+.footer-apps {
+  flex: 1;
+  margin: 10px;
+}
+
+.social-icons img{
+  width: 32px;
+  margin: 0 5px;
+}
+
+.app-icons img{
+    height: 50px;
+    margin: 0 5px;
+}
+
+
+.footer-bottom {
+  background-color: #4b2e1f; 
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.contact-info .icon {
+  width: 32px;
+  height: auto;
+}
+
+.contact-info .phone-number {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+}

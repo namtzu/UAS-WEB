@@ -54,8 +54,8 @@
 </p>
             </div>
         </div>
-        <div class="map-section">
-            map
+        <div class="map-section" id="map">
+            
         </div>
     </div>
 
@@ -63,17 +63,103 @@
 
         <h1> Fasilitas</h1>
         <div class="slider-container">
-            <div class="pic-container">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+            <div class="carousel">
+            <div class="slides" id="slideContainer">
+    
+                <div class="slide"><img src="images/fasilitas1.png" alt="1"></div>
+                <div class="slide"><img src="images/fasilitas2.png" alt="2"></div>
+                <div class="slide"><img src="images/fasilitas3.png" alt="3"></div>
+
+                <div class="slide"><img src="images/fasilitas1.png" alt="1"></div>
+                <div class="slide"><img src="images/fasilitas2.png" alt="2"></div>
+                <div class="slide"><img src="images/fasilitas3.png" alt="3"></div>
             </div>
+            </div>
+            
             <div class="slide-button">
-                <button class="circle-button">></button>
+                <button class="circle-button" onclick="nextSlide()">></button>
             </div>
         </div>
     </div>
-    
+    <footer class="footer-main">
+    <div class="footer-top">
+        <img src="images/logolc.png" alt="Labbaik Chicken Logo" class="footer-logo" />
+
+        <div class="footer-contact">
+            <div class="contact-info">
+                <a href="#"><img class="icon" src="images/whatsapp-icon.png" alt="Whatsapp" /></a>
+                <p class="phone-number">0852 - 2000 - 0800</p>
+                <a href="#"><img class="icon" src="images/facebook-icon.png" alt="Facebook" /></a>
+                <a href="#"><img class="icon" src="images/instagram-icon.png" alt="Instagram" /></a>
+            </div>
+        </div>
+
+
+        <div class="footer-apps">
+        <p>Temukan Kami di Aplikasi :</p>
+        <div class="app-icons">
+            <img src="images/gofood.jpg" alt="GoFood" />
+            <img src="images/shopeefood.png" alt="ShopeeFood" />
+            <img src="images/grabfood.jpg" alt="GrabFood" />
+        </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Labbaik Chicken. All rights reserved</p>
+    </div>
+    </footer>
 </body>
 <script src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js">
+    </script>
+<script>
+    function initialize(){
+    var propertiPeta = {
+        center:new google.maps.LatLng(-6.130718803195591, 106.16606375708555),
+        zoom: 10,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+
+    var peta = new google.maps.Map(document.getElementById("map"), propertiPeta);
+
+    var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(-6.130718803195591, 106.16606375708555),
+            map: peta,
+            title: "Labbaik Chicken cabang Ciwaru"
+        });
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+  const slideContainer = document.getElementById('slideContainer');
+  const slideWidth = 425;
+  const visibleSlides = 3;
+  const totalSlides = 6; 
+  let currentIndex = 0; 
+
+  function updateSlide(animate = true) {
+    if (!animate) {
+      slideContainer.style.transition = 'none';
+    } else {
+      slideContainer.style.transition = 'transform 0.5s ease';
+    }
+
+    slideContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    updateSlide();
+    
+    if (currentIndex === totalSlides - visibleSlides) {
+      setTimeout(() => {
+        currentIndex = 0;
+        updateSlide(false);
+      }, 500);
+    }
+  }
+  updateSlide(false);
+</script>
 </html>

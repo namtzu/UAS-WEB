@@ -101,16 +101,32 @@
 
         <div class="row">
 
-        <div>
-            <div class="cardDeals card-deal1"></div>
+        <div class="prev">
+            <button class = "circle-button" onclick="prevSlide()"><</button>
         </div>
 
-        <div>
-            <div class="cardDeals card-deal2"></di>
-        </div>    
+        <div class="carousel">
+        <div class="slides" id="slideContainer">
+    
+            <div class="slide"><img src="images/deals.png" alt="5"></div>
+            <div class="slide"><img src="images/deals.png" alt="6"></div>
+
+            <div class="slide"><img src="images/deals.png" alt="1"></div>
+            <div class="slide"><img src="images/deals.png" alt="2"></div>
+            <div class="slide"><img src="images/deals.png" alt="3"></div>
+            <div class="slide"><img src="images/deals.png" alt="4"></div>
+            <div class="slide"><img src="images/deals.png" alt="5"></div>
+            <div class="slide"><img src="images/deals.png" alt="6"></div>
+
+            <div class="slide"><img src="images/deals.png" alt="1"></div>
+            <div class="slide"><img src="images/deals.png" alt="2"></div>
 
         </div>
+        </div>
 
+        <div class="next">
+            <button class = "circle-button" onclick="nextSlide()">></button>
+        </div>
     </section>
 
     <section class="daftarMenu">
@@ -119,6 +135,82 @@
 
     </section>
 
+    <footer class="footer-main">
+    <div class="footer-top">
+        <img src="images/logolc.png" alt="Labbaik Chicken Logo" class="footer-logo" />
+
+        <div class="footer-contact">
+            <div class="contact-info">
+                <a href="#"><img class="icon" src="images/whatsapp-icon.png" alt="Whatsapp" /></a>
+                <p class="phone-number">0852 - 2000 - 0800</p>
+                <a href="#"><img class="icon" src="images/facebook-icon.png" alt="Facebook" /></a>
+                <a href="#"><img class="icon" src="images/instagram-icon.png" alt="Instagram" /></a>
+            </div>
+        </div>
+
+
+        <div class="footer-apps">
+        <p>Temukan Kami di Aplikasi :</p>
+        <div class="app-icons">
+            <img src="images/gofood.jpg" alt="GoFood" />
+            <img src="images/shopeefood.png" alt="ShopeeFood" />
+            <img src="images/grabfood.jpg" alt="GrabFood" />
+        </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Labbaik Chicken. All rights reserved</p>
+    </div>
+    </footer>
+
 <script src="app.js"></script>
+
+<script>
+  const slideContainer = document.getElementById('slideContainer');
+  const slideWidth = 425;
+  const visibleSlides = 3;
+  const totalSlides = 10; // termasuk duplikat
+  let currentIndex = 2; // mulai dari index ke-2 (slide asli pertama)
+
+  function updateSlide(animate = true) {
+    if (!animate) {
+      slideContainer.style.transition = 'none';
+    } else {
+      slideContainer.style.transition = 'transform 0.5s ease';
+    }
+
+    slideContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  function nextSlide() {
+    currentIndex++;
+    updateSlide();
+
+    // Reset ke slide asli jika di akhir
+    if (currentIndex === totalSlides - visibleSlides + 1) {
+      setTimeout(() => {
+        currentIndex = 2;
+        updateSlide(false);
+      }, 500);
+    }
+  }
+
+  function prevSlide() {
+    currentIndex--;
+    updateSlide();
+
+    // Reset ke slide asli jika di awal duplikat
+    if (currentIndex === 1) {
+      setTimeout(() => {
+        currentIndex = totalSlides - visibleSlides;
+        updateSlide(false);
+      }, 500);
+    }
+  }
+
+  // Set posisi awal
+  updateSlide(false);
+</script>
 
 </body>
