@@ -20,7 +20,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     ];
 }
 
-// Siapkan data dalam array JSON
 $output = [];
 foreach ($menuByCategory as $kategori => $items) {
     $output[] = [

@@ -1,32 +1,58 @@
-document.getElementById('testimoni-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", function(){
 
-    const nama = document.getElementById('nama').value;
-    const pesan = document.getElementById('pesan').value;
-    const rating = document.querySelector('input[name="bintang"]:checked');
+    const testiCon = document.getElementById("testimoni-container");
 
-    if (!rating) {
-        alert("Silakan pilih rating bintang!");
-        return;
-    }
+    fetch("get_testimoni.php")
+    .then(response => response.json())
+    .then(data => {
+        
+        data.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('testimoni');
+        div.innerHTML = `
+          <h4>${item.nama}</h4>
+          <h3>${'★'.repeat(item.rating)}</h3>
+          <p>"${item.ulasan}"</p>
+        `;
+        testiCon.appendChild(div);
+      });
+    })
+    .catch(err => console.error('Gagal memuat testimoni:', err));
+});
 
-    const bintang = rating.value;
+document.getElementById('testimoni-form').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-    const container = document.getElementById('testimoni-container');
-    const newTestimoni = document.createElement('div');
-    newTestimoni.classList.add('testimoni');
+  const nama = document.getElementById('nama').value;
+  const pesan = document.getElementById('pesan').value;
+  const ratingInput = document.querySelector('input[name="bintang"]:checked');
 
-    const stars = '★'.repeat(bintang);
+  if (!ratingInput) {
+    alert('Silakan pilih rating bintang.');
+    return;
+  }
 
-    newTestimoni.innerHTML = `
-        <h4>${nama}</h4>
-        <h3>${stars}</h3>
-        <p>"${pesan}"</p>
-    `;
+  const bintang = ratingInput.value;
 
-    container.prepend(newTestimoni); 
+  const body = new URLSearchParams();
+  body.append('nama', nama);
+  body.append('pesan', pesan);
+  body.append('bintang', bintang);
 
-    alert("Terima kasih atas testimoni Anda!");
-
-    this.reset();
+  fetch('input_testimoni.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: body.toString(),
+  })
+    .then((res) => res.text())
+    .then((data) => {
+      alert(data);
+      this.reset();
+    })
+    .catch((err) => {
+      console.error('Error:', err);
+      alert('Terjadi kesalahan saat mengirim data.');
+    });
 });
