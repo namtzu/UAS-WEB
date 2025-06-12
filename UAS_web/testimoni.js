@@ -27,10 +27,13 @@ document.getElementById('testimoni-form').addEventListener('submit', function (e
   const pesan = document.getElementById('pesan').value;
   const ratingInput = document.querySelector('input[name="bintang"]:checked');
 
+
   if (!ratingInput) {
     alert('Silakan pilih rating bintang.');
     return;
   }
+
+  
 
   const bintang = ratingInput.value;
 

@@ -59,6 +59,28 @@ body{
 }
 
 </style>
+<script>
+/*$(document).ready(function() {
+    $('form[name="form1"]').on('submit', function(e) {
+        let isValid = true;
+        let errorMessage = "";
+
+        // Cek input teks
+        $('input[type="text"], textarea, select', this).each(function() {
+            if ($(this).val().trim() === "") {
+                isValid = false;
+                errorMessage = "Semua field harus diisi!";
+                return false; // keluar dari .each()
+            }
+        });
+
+        if (!isValid) {
+            alert(errorMessage);
+            e.preventDefault(); // cegah submit
+        }
+    });
+});
+</script>
 <body>
    <form name="form1" method="post" action="">
     <h2 class="subhead"><span class = "action">Input</span><span class = "data-menu">Data Menu</span></h2>
@@ -66,7 +88,7 @@ body{
         <table width="500" border="0" >
             <tr>
                 <td class = "non-input">Kategori :</td>
-                <td><select name="id_kategori">
+                <td><select name="id_kategori" required>
                     <option value="">-- Pilih Kategori --</option>
                         <?php
                         include "koneksi.php";
@@ -80,19 +102,19 @@ body{
             </tr>
             <tr>
                 <td class = "non-input">Nama Menu : </td>
-                <td><input type="text" name="nama_menu"></td>
+                <td><input type="text" name="nama_menu" required></td>
             </tr>
             <tr>
                 <td class = "non-input">Harga Menu : </td>
-                <td><input type="text" name="harga_menu" ></td>
+                <td><input type="text" name="harga_menu" required></td>
             </tr>
             <tr>
                 <td class = "non-input">Deskripsi Menu : </td>
-                <td><textarea name="deskripsi_menu" rows="5" cols="22"></textarea></td>
+                <td><textarea name="deskripsi_menu" rows="5" cols="22" required></textarea></td>
             </tr>
             <tr>
                 <td class = "non-input">Direktori Gambar : </td>
-                <td><input type="text" name="dir_gambar"></td>
+                <td><input type="text" name="dir_gambar" required></td>
             </tr>
             <tr>
                 <td colspan='2' style = "text-align: center;"><input type="submit" name="input" value="input"></td>
@@ -126,6 +148,7 @@ $result = mysqli_query($id_mysql, "
 SELECT m.idMenu, m.namaMenu, m.hargaMenu, m.deskripsiMenu, m.direktoriGambar, k.namaKategori
 FROM tabel_menu m
 LEFT JOIN tabel_kategori k ON m.id_Kategori = k.idKategori
+ORDER BY k.idKategori ASC
 
 ");
 
