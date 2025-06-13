@@ -240,7 +240,7 @@ button {
 .rating input:checked ~ label,
 .rating label:hover,
 .rating label:hover ~ label {
-    color: #ffcc00;
+    color: #ff04ea;
 }
 
 .testimoni-container {
