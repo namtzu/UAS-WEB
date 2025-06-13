@@ -58,4 +58,6 @@ document.getElementById('testimoni-form').addEventListener('submit', function (e
       console.error('Error:', err);
       alert('Terjadi kesalahan saat mengirim data.');
     });
+
+    location.reload(true);
 });
