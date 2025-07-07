@@ -35,8 +35,8 @@ Admin dapat menghapus item menu yang sudah tidak tersedia dari daftar.
 ---
 
 🛠️ Tools & Teknologi
-Front-End: HTML, CSS, JavaScript
-Back-End: PHP
-Database: MySQL
-Editor: Visual Studio Code
+- Front-End: HTML, CSS, JavaScript
+- Back-End: PHP
+- Database: MySQL
+- Editor: Visual Studio Code
 
